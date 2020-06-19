@@ -5,24 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rmonatis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/19 12:30:57 by rmonatis          #+#    #+#             */
-/*   Updated: 2020/06/19 12:39:54 by rmonatis         ###   ########.fr       */
+/*   Created: 2020/06/19 16:07:41 by rmonatis          #+#    #+#             */
+/*   Updated: 2020/06/19 16:24:38 by rmonatis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include <unistd.h>
 
-void		ft_putchar()
+int ft_putchar (char z)
+{
+	write(1, &z, 1);
+	return (0);
+}
+
+void ft_print_reverse_alphabet(void)
 {
 	char z;
 	z = 'z';
-	while( z >= 'a' )
+	while(z >= 'a')
 	{
-		write (1, &z, 1);
+		ft_putchar(z);
 		z = z - 1;
 	}
-	write (1, "\n", 1);
 }
-
 
